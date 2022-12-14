@@ -5,79 +5,38 @@
   </head>
   <body>
     <a-scene sq-spawnpoint="position: 0 1 0;" save>
+
       <!-- A camera to play with in aframe, banter ignores it. -->
-      <a-entity
-        id="cameraMan"
-        camera
-        look-controls
-        rotation="0 90 90"
-        wasd-controls="fly: true"
-        position="0 2 2"
-      ></a-entity>
+      <a-entity id="cameraMan" camera look-controls rotation="0 90 90" wasd-controls="fly: true" position="0 2 2"></a-entity>
 
       <!-- Some background boneworks ambiance -->
-      <a-sound
-        id="bonebackSound"
-        position="0 80 0"
-        autoplay="true"
-        loop="true"
-        volume="0.05"
-        src="https://cdn.glitch.global/376b5e69-e989-4420-887c-8925a3e39012/boneback.mp3"
-      ></a-sound>
+      <a-sound id="bonebackSound" position="0 80 0" autoplay="true" loop="true"  volume="0.05" src="https://cdn.glitch.global/376b5e69-e989-4420-887c-8925a3e39012/boneback.mp3"></a-sound>
 
-      <a-entity
-        sq-collider="recursive: true"
-        scale="1 1 1"
-        position="0 0 0"
-        rotation="0 0 0"
-        gltf-model="https://cdn.glitch.me/be7306b6-2e7e-4901-abf8-d5221790a499/JediCouncil3.glb?v=1671037053719"
-        animation-mixer
-      ></a-entity>
+      <!--<a-entity sq-collider="recursive: true" position="0 0.5 4" scale="1 1 1" gltf-model="https://cdn.glitch.global/1da05fad-5fe8-478d-991a-735744a4c9a9/couch.glb?v=1670849689571"></a-entity>  -->
 
+      <a-entity sq-collider="recursive: true" scale="1 1 1" position="0 0 0" rotation="0 0 0" 
+                gltf-model="https://cdn.glitch.me/be7306b6-2e7e-4901-abf8-d5221790a499/JediCouncil3.glb?v=1671037053719" animation-mixer></a-entity>
+
+      
       <!-- A bunch of portals! -->
-      <a-link
-        position="-6 0 0"
-        title="Star Trek - The next generation Bridge"
-        href="https://star-trek-bridge.glitch.me"
-      ></a-link>
-
-      <a-link
-        position="-3 0 -4"
-        title="Portal glaDOS chamber"
-        href="https://sq-portal.glitch.me"
-      ></a-link>
-
-      <a-link
-        position="0 0 8"
-        title="Back to Community Hub"
-        href="https://sq-community-hub.glitch.me"
-      ></a-link>
-
-      <a-link
-        position="3 0 -4"
-        title="Peache's Castle"
-        href="https://sq-peach.glitch.me"
-      ></a-link>
-
-      <a-link
-        position="6 0 0"
-        title="Minecraft Village"
-        href="https://sq-mine.glitch.me"
-      ></a-link>
-
+      <a-link position="-6 0 0" title="Star Trek - The next generation Bridge" href="https://star-trek-bridge.glitch.me" ></a-link>
+      
+      <a-link position="-3 0 -4" title="Portal glaDOS chamber" href="https://sq-portal.glitch.me" ></a-link>
+      
+      <a-link position="0 0 8" title="Back to Community Hub" href="https://sq-community-hub.glitch.me" ></a-link>
+      
+      <a-link position="3 0 -4" title="Peache's Castle" href="https://sq-peach.glitch.me" ></a-link>
+      
+      <a-link position="6 0 0" title="Minecraft Village" href="https://sq-mine.glitch.me" ></a-link>
+      
       <!-- A box to click to be able to open a page -->
-      <a-box
-        sq-collider
-        sq-interactable
-        handle-click
-        color="green"
-        position="0 1 -3"
-        depth="0.05"
-        width="1.5"
-        height="0.4"
-      >
+      <a-box sq-collider sq-interactable handle-click color="green" position="0 1 -3" depth="0.05" width="1.5" height="0.4">
         <a-text value="open more" position="0 0 0.06" align="center"></a-text>
       </a-box>
+
+ 
+     
+      
     </a-scene>
   </body>
 </html>

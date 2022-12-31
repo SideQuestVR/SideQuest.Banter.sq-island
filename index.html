@@ -22,12 +22,15 @@
   </head>
   <body>
     <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/banter_wintersportresort">
-      <a-box id="teleportBox" sq-triggercollider sq-interactable trigger-handler position="9 0.5 8" width="2" height="4" depth="2" color="green"></a-box>
+      
+      <a-entity sq-boxcollider="size: 0.2 3 10" sq-triggercollider trigger-handler position="9 0.5 8"  >
+          <a-box material="color: #70d6ff" rotation="0 0 0" position="0 0 0" scale="1 2 1" ></a-box>  
+      </a-entity> 
 
     </a-scene>
 
       <!-- Some background boneworks ambiance -->
-      <a-sound id="bonebackSound" position="0 0 0" autoplay="true" loop="true"  volume="0.5" src="https://cdn.glitch.global/be7306b6-2e7e-4901-abf8-d5221790a499/WintersportMusic.mp3?v=1672506816443"></a-sound>
+      <a-sound position="0 0 0" autoplay="true" loop="true"  volume="0.5" src="https://cdn.glitch.global/be7306b6-2e7e-4901-abf8-d5221790a499/WintersportMusic.mp3?v=1672506816443"></a-sound>
 
   </body>
 </html>

@@ -9,12 +9,10 @@
             {
               this.el.addEventListener('trigger-enter', ()=>{
                 if(this.el.object3D.userData.isLocalPlayer) {
-                      movePosition({x: -38, y: 95, z: -260}, 23)
+                     // movePosition({x: -38, y: 95, z: -260}, 23)
+                      movePlayer({x: -38, y: 95, z: -260});
 
-                }//else if(this.el.object3D.userData.other)
-               // {
-              // This is another object, this.el.object3D.userData.other is the other HTML element.
-               // }
+                }
         });
         }
         });
@@ -22,11 +20,9 @@
   </head>
   <body>
     <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/banter_wintersportresort">
-      
-      <a-entity sq-boxcollider="size: 0.2 3 10" sq-triggercollider trigger-handler position="9 0.5 8"  >
-          <a-box material="color: #70d6ff" rotation="0 0 0" position="0 0 0" scale="1 2 1" ></a-box>  
+      <a-entity sq-boxcollider="size: 2 3 2" sq-triggercollider trigger-handler position="9 0.5 8"  >
+          <a-box material="color: #70d6ff" rotation="0 0 0" position="0 0 0" scale="2 3 2" ></a-box>  
       </a-entity> 
-
     </a-scene>
 
       <!-- Some background boneworks ambiance -->

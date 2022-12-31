@@ -11,28 +11,23 @@
                 if(this.el.object3D.userData.isLocalPlayer) {
                       movePosition({x: -38, y: 95, z: -260}, 23)
 
-                }else if(this.el.object3D.userData.other)
-                {
+                }//else if(this.el.object3D.userData.other)
+               // {
               // This is another object, this.el.object3D.userData.other is the other HTML element.
-                }
+               // }
         });
         }
         });
-
     </script>
   </head>
   <body>
-    
     <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/banter_wintersportresort">
-      <a-box id="teleportBox" sq-triggercollider sq-interactable trigger-handler position="9 0.3 -8" width="2" height="4" depth="2" color="green"></a-box>
+      <a-box id="teleportBox" sq-triggercollider sq-interactable trigger-handler position="9 0.5 8" width="2" height="4" depth="2" color="green"></a-box>
 
     </a-scene>
 
-
-   
-
       <!-- Some background boneworks ambiance -->
-      <a-sound id="bonebackSound" position="0 0 0" autoplay="true" loop="true"  volume="0.05" src="https://cdn.glitch.global/376b5e69-e989-4420-887c-8925a3e39012/boneback.mp3"></a-sound>
+      <a-sound id="bonebackSound" position="0 0 0" autoplay="true" loop="true"  volume="0.5" src="https://cdn.glitch.global/be7306b6-2e7e-4901-abf8-d5221790a499/WintersportMusic.mp3?v=1672506816443"></a-sound>
 
   </body>
 </html>

@@ -9,7 +9,7 @@
             {
               this.el.addEventListener('trigger-enter', ()=>{
                 if(this.el.object3D.userData.isLocalPlayer) {
-                      movePosition({x: 0, y: 0, z: 0}, 23)
+                      movePosition({x: -38, y: 95, z: -260}, 23)
 
                 }else if(this.el.object3D.userData.other)
                 {
@@ -24,7 +24,7 @@
   <body>
     
     <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/banter_wintersportresort">
-      <a-box id="teleportBox" sq-collider position="0 1.6 -3" width="1" height="1" depth="1"></a-box>
+      <a-box id="teleportBox" sq-collider position="9 0.3 -8" width="2" height="2" depth="2" color="green"></a-box>
 
     </a-scene>
 
@@ -32,14 +32,7 @@
    
 
       <!-- Some background boneworks ambiance -->
-<!--      <a-sound id="bonebackSound" position="0 80 0" autoplay="true" loop="true"  volume="0.05" src="https://cdn.glitch.global/376b5e69-e989-4420-887c-8925a3e39012/boneback.mp3"></a-sound>
+      <a-sound id="bonebackSound" position="0 80 0" autoplay="true" loop="true"  volume="0.03" src="https://cdn.glitch.global/376b5e69-e989-4420-887c-8925a3e39012/boneback.mp3"></a-sound>
 
-      <!--<a-entity sq-collider="recursive: true" position="0 0.5 4" scale="1 1 1" gltf-model="https://cdn.glitch.global/1da05fad-5fe8-478d-991a-735744a4c9a9/couch.glb?v=1670849689571"></a-entity>  -->
-<!-- <a-scene>
-      <a-entity gltf-model="https://hoehler.org/Banter/glb/Wintersport resort_lift.glb" animation-mixer
-                sq-rigidbody="collisionDetectionMode: continuous-speculative; isKinematic: true" ></a-entity>
-<!--       <a-entity gltf-model="https://hoehler.org/Banter/glb/Wintersport resort.glb"></a-entity>
-
-     </a-scene> -->
   </body>
 </html>

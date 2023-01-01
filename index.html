@@ -1,5 +1,11 @@
 <html>
   <head>
+    
+        <!-- Add meta tags to show icon/title in the menu in banter -->
+    <meta property="og:title" content="Wintersport-Resort">
+    <meta property="og:description" content="Don't break your bones!">
+    <meta property="og:image" content="https://hoehler.org/Banter/thumbnail.png">
+    
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script>
@@ -11,19 +17,13 @@
                 if(this.el.object3D.userData.isLocalPlayer) {
                      // movePosition({x: -38, y: 95, z: -260}, 23)
                       movePlayer({x: -38, y: 95, z: -260});
-
                 }
         });
         }
         });
     </script>
-    
-    <!-- Add meta tags to show icon/title in the menu in banter -->
-    <meta property="og:title" content="Wintersport-Resort">
-    <meta property="og:description" content="Don't break your bones!">
-    <meta property="og:image" content="https://hoehler.org/Banter/thumbnail.png">
-
   </head>
+  
   <body>
     <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/banter_wintersportresort">
       <a-entity sq-boxcollider="size: 2 3 2" sq-triggercollider trigger-handler position="9 0.5 8"  >

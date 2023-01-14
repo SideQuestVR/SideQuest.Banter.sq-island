@@ -9,14 +9,29 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script>
-      AFRAME.registerComponent('trigger-handler', 
+      AFRAME.registerComponent('teleport1-handler', 
           {
             init: function() 
             {
               this.el.addEventListener('trigger-enter', ()=>{
                 if(this.el.object3D.userData.isLocalPlayer) {
-                     // movePosition({x: -38, y: 95, z: -260}, 23)
+                     
                       movePlayer({x: -38, y: 95, z: -260});
+                }
+        });
+        }
+        });
+    </script>
+    
+      <script>
+      AFRAME.registerComponent('teleport2-handler', 
+          {
+            init: function() 
+            {
+              this.el.addEventListener('trigger-enter', ()=>{
+                if(this.el.object3D.userData.isLocalPlayer) {
+                     
+                      movePlayer({x: -46, y: 94.3, z: -277});
                 }
         });
         }
@@ -27,9 +42,14 @@
   <body>
     <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/banter_wintersportresort" sq-refreshrate="rate:90">
 
-      <a-entity sq-boxcollider="size: 1.5 2.5 2.5" sq-triggercollider trigger-handler position="-13.2 1 6.3"  >
+      <a-entity sq-boxcollider="size: 1.5 2.5 2.5" sq-triggercollider teleport1-handler position="-13.2 1 6.3"  >
           <a-box material="transparent: true; opacity: 0.0"  ></a-box>  
       </a-entity> 
+      
+      <a-entity sq-boxcollider="size: 1.5 2.5 2.5" sq-triggercollider teleport2-handler position="0 5 -102"  >
+          <a-box material="transparent: true; opacity: 0.5"  ></a-box>  
+      </a-entity> 
+      
       <a-cylinder sq-boxcollider sq-triggercollider sq-gravityfield="gravity: 0 -3 0" color="black" material="transparent: true; opacity: 0.05; side: double" rotation="0 55 0" position="-64 0 82" scale="35 35 35"></a-cylinder> 
   
       <!-- Some background boneworks ambiance -->

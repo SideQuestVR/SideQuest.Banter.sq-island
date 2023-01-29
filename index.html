@@ -16,7 +16,7 @@
               this.el.addEventListener('trigger-enter', ()=>{
                 if(this.el.object3D.userData.isLocalPlayer) {
                      
-                      movePlayer({x: -38, y: 95, z: -260});
+                      movePlayer({x: -46.99, y: 95, z: -258.81});
                 }
         });
         }
@@ -45,10 +45,13 @@
       <a-entity sq-boxcollider="size: 1.5 2.5 2.5" sq-triggercollider teleport1-handler position="-13.2 1 6.3"  >
           <a-box material="transparent: true; opacity: 0.0"  ></a-box>  
       </a-entity> 
+
       
       <a-entity sq-boxcollider="size: 1.5 2.5 2.5" sq-triggercollider teleport2-handler position="-8 -5 -108"  >
           <a-box material="transparent: true; opacity: 0.0"  ></a-box>  
       </a-entity> 
+      
+      
       
       <a-cylinder sq-boxcollider sq-triggercollider sq-gravityfield="gravity: 0 -3 0" color="black" material="transparent: true; opacity: 0.05; side: double" rotation="0 55 0" position="-64 0 82" scale="35 35 35"></a-cylinder> 
       

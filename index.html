@@ -7,14 +7,31 @@
     <meta property="og:image" content="https://hoehler.org/Banter/testarea51_thumb.png">
     <meta name="sidequest-space-verification" content="45400ca7-0119-47b3-b527-3447299c8a59">
     
+  
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script>
+        // window.playlistId = 'PLJAqjOYAEgb5_qkDOY7V9nvcOSntp-HoM'; 
+        window.playlistId = ''; 
+        window.instanceId = 'Slipstram';
+    </script>
+    <script>
+          // A simple aframe component to handle the click
+          AFRAME.registerComponent('handle-click', {
+              init: function () {
+                  // When you click on an element, run the animation on the parent element
+                  this.el.addEventListener('click', () => {
+                    openPage("https://sq-synced-videoplayer.glitch.me/playlist.html?instanceId=" + window.instanceId + ( window.playlistId ? "&playlistId=" + window.playlistId : "") + "&user=" + window.user.id +"-_-"+window.user.name);
+                  })
+              }
+          });
+        </script>
 
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_android?135;
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_android?136;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?135;"
+                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?136;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-clippingplane="near: 0.15; far: 1000">
       
             <a-cylinder sq-boxcollider sq-triggercollider color="black" material="transparent: true; opacity: 0.0;  side: double" rotation="0 0 0" position="0 0 0" scale="100000 100000 100000"></a-cylinder> 

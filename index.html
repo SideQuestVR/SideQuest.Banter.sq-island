@@ -26,6 +26,37 @@
           });
         </script>
 
+    
+<script>
+  AFRAME.registerComponent('toggle-components', {
+    init: function() {
+      var box = document.querySelector('a-box');
+      var youtubeVideo = document.querySelector('#youtube-video');
+      var button = document.querySelector('#Button01');
+
+      button.addEventListener('hitstart', function () {
+        box.setAttribute('sq-collider', '');
+        box.setAttribute('sq-interactable', '');
+        box.setAttribute('handle-click', '');
+        youtubeVideo.setAttribute('sq-browser', 'mipMaps: 1; pixelsPerUnit: 600; mode: local; url: about%3Ablank; afterLoadActions: [ { &quot;actionType&quot;: &quot;delayseconds&quot;, &quot;numParam1&quot;: 1}, {&quot;actionType&quot;: &quot;click2d&quot;, &quot;numParam1&quot;: 150, &quot;numParam2&quot;: 150}]');
+        button.setAttribute('material', 'color', 'green'); // Changes color to green when the player enters
+      });
+
+      button.addEventListener('hitend', function () {
+        box.removeAttribute('sq-collider');
+        box.removeAttribute('sq-interactable');
+        box.removeAttribute('handle-click');
+        youtubeVideo.setAttribute('sq-browser', 'mipMaps: 1; pixelsPerUnit: 600; mode: local; url: about:blank;');
+        button.setAttribute('material', 'color', 'red'); // Changes color to red when the player leaves
+      });
+    }
+  });
+</script>
+
+
+    
+    
+    
   </head>
   
   <body>
@@ -38,39 +69,13 @@
       
       
       
-      <a-box id="toggle-button" color="blue" position="50 2.5 -28" width="1" height="1" depth="0.1"></a-box>
-      <a-box id="toggle-button" color="blue" position="50 2.5 -21" width="1" height="1" depth="0.1" toggle-components></a-box>
+
+<a-box id="Button01" sq-boxcollider sq-triggercollider color="black" material="transparent: true; opacity: 0.5; side: double" position="60 10 -5" width="25" height="25" depth="25" toggle-components></a-box>
 
 
-      <script>
-  AFRAME.registerComponent('toggle-components', {
-    init: function() {
-      var enabled = true;
-      var box = document.querySelector('a-box');
-      var youtubeVideo = document.querySelector('#youtube-video');
 
-      this.el.addEventListener('click', function () {
-        if (enabled) {
-          box.removeAttribute('sq-collider');
-          box.removeAttribute('sq-interactable');
-          box.removeAttribute('handle-click');
-          youtubeVideo.removeAttribute('sq-browser');
-        } else {
-          box.setAttribute('sq-collider', '');
-          box.setAttribute('sq-interactable', '');
-          box.setAttribute('handle-click', '');
-          youtubeVideo.setAttribute('sq-browser', 'mipMaps: 1; pixelsPerUnit: 600; mode: local; url: about%3Ablank; afterLoadActions: [ { &quot;actionType&quot;: &quot;delayseconds&quot;, &quot;numParam1&quot;: 1}, {&quot;actionType&quot;: &quot;click2d&quot;, &quot;numParam1&quot;: 150, &quot;numParam2&quot;: 150}]');
-        }
 
-        enabled = !enabled;
-      });
-    }
-  });
-</script>
-      
-      
-     
-      
+
       
       
        <script src="https://sq-synced-videoplayer.glitch.me/video-player.js"></script>

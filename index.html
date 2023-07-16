@@ -1,3 +1,4 @@
+
 <html>
   <head>
     
@@ -29,9 +30,9 @@
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_android?145;
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_android?146;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?145;"
+                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?146;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 181;" sq-clippingplane="near: 0.15; far: 1000">
 
 
@@ -42,11 +43,17 @@
       <a-box sq-collider sq-interactable handle-click color="#f00075" position="53 2.8 -21" rotation="0 17 0" depth="0.05" width="1.6" height="0.3">
         <a-text value="playlist & volume" position="0 0.03 0.06" align="center"></a-text>
       </a-box>
-<!--       sq-browser-interaction -->
+<!--       sq-browser-interaction 
       <a-entity id="youtube-video"  sq-browser="mipMaps: 1; pixelsPerUnit: 600; mode: local; url: about%3Ablank; afterLoadActions: [ { &quot;actionType&quot;: &quot;delayseconds&quot;, &quot;numParam1&quot;: 1}, {&quot;actionType&quot;: &quot;click2d&quot;, &quot;numParam1&quot;: 150, &quot;numParam2&quot;: 150}]" 
                 position="53 4.5 -21" rotation="0 17 0" scale="5 5 5"></a-entity>
+      -->
+      <a-plane 
+        src="https://cdn.glitch.global/d797d8d2-a3e9-4404-8fab-b1f1dec080ee/stable-diffusion-xl(23).jpeg?v=1689516705604" 
+        position="53 4.5 -21" 
+        rotation="0 17 0" 
+        scale="5 3 5">
+      </a-plane>
       
-
     </a-scene>
 
   </body>

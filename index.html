@@ -29,60 +29,13 @@
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_android?144;
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_android?145;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?144;"
+                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?145;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 181;" sq-clippingplane="near: 0.15; far: 1000">
-      
-            <a-cylinder sq-boxcollider sq-triggercollider color="black" material="transparent: true; opacity: 0.0;  side: double" rotation="0 0 0" position="0 0 0" scale="100000 100000 100000"></a-cylinder> 
-      
-      
-      
-
-<a-box id="Button01" sq-boxcollider sq-triggercollider trigger-logic="target: #targetEntity;" color="black" material="transparent: true; opacity: 0.5; side: double" position="60 10 -5" width="25" height="25" depth="25"></a-box>
 
 
 
-<script>
-  AFRAME.registerComponent('trigger-logic', {
-    schema: {
-      target: {type: 'selector'}
-    },
-
-    init: function() {
-      // Create a THREE.Box3 object to represent the trigger box
-      this.box = new THREE.Box3();
-
-      // Get a reference to the user's entity
-      // Replace '#user' with the selector of your user's entity
-      this.user = document.querySelector('#user');
-
-      // Get a reference to the target entity
-      this.targetEntity = this.data.target;
-    },
-
-    tick: function() {
-      // Update the box to match the trigger's current position and size
-      this.box.setFromObject(this.el.object3D);
-
-      // Check if the user is inside the box
-      if (this.box.containsPoint(this.user.object3D.position)) {
-        // The user is inside the box, enable the target entity
-        this.targetEntity.setAttribute('visible', true);
-      } else {
-        // The user is outside the box, disable the target entity
-        this.targetEntity.setAttribute('visible', false);
-      }
-    }
-  });
-</script>
-
-
-
-
-
-
-      
       
        <script src="https://sq-synced-videoplayer.glitch.me/video-player.js"></script>
       

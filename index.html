@@ -10,49 +10,16 @@
     
   
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script>
-         window.playlistId = 'PLE4DBF5BC6B960248'; 
-
-        window.instanceId = 'Slipstram';
-    </script>
-    <script>
-          // A simple aframe component to handle the click
-          AFRAME.registerComponent('handle-click', {
-              init: function () {
-                  // When you click on an element, run the animation on the parent element
-                  this.el.addEventListener('click', () => {
-                    openPage("https://sq-synced-videoplayer.glitch.me/playlist.html?instanceId=" + window.instanceId + ( window.playlistId ? "&playlistId=" + window.playlistId : "") + "&user=" + window.user.id +"-_-"+window.user.name);
-                  })
-              }
-          });
-        </script>
     
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/backrooms_android?221;
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/backrooms_android?222;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/slipstream_island_sunset_standalonewindows?221;"
+                             desktop: https://hoehler.org/Banter/AssetBundle/backrooms_standalonewindows?222;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 181;" sq-clippingplane="near: 0.15; far: 1000">
 
 
-
-      
-       <script src="https://sq-synced-videoplayer.glitch.me/video-player.js"></script>
-      
-      <a-box sq-collider sq-interactable handle-click color="#f00075" position="53 2.8 -21" rotation="0 17 0" depth="0.05" width="1.6" height="0.3">
-        <a-text value="playlist & volume" position="0 0.03 0.06" align="center"></a-text>
-      </a-box>
-<!--       sq-browser-interaction 
-      <a-entity id="youtube-video"  sq-browser="mipMaps: 1; pixelsPerUnit: 600; mode: local; url: about%3Ablank; afterLoadActions: [ { &quot;actionType&quot;: &quot;delayseconds&quot;, &quot;numParam1&quot;: 1}, {&quot;actionType&quot;: &quot;click2d&quot;, &quot;numParam1&quot;: 150, &quot;numParam2&quot;: 150}]" 
-                position="53 4.5 -21" rotation="0 17 0" scale="5 5 5"></a-entity>
-      -->
-      <a-plane 
-        src="https://cdn.glitch.global/9e304442-187c-4c18-93a2-5969d329fa33/BabyGollum.jpg?v=1689517709451" 
-        position="53 4.5 -21" 
-        rotation="0 17 0" 
-        scale="5 2.9 5">
-      </a-plane>
       
     </a-scene>
 

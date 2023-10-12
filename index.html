@@ -15,7 +15,7 @@
       // A simple aframe component to handle the click
       AFRAME.registerComponent('handle-click', {
           init: function () {
-              // When you click on an element, run the animation on the parent element
+              // When you click on an element, run the animatio on the parent element
               this.el.addEventListener('click', () => {
                  deeplink("https://www.meta.com/en-gb/experiences/3635172946605196/")
               })
@@ -28,14 +28,13 @@
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/scan_android?261;
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/scan_android?262;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/scan_standalonewindows?261;"
+                             desktop: https://hoehler.org/Banter/AssetBundle/scan_standalonewindows?262;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-clippingplane="near: 0.15; far: 1000">
 
       <!-- A box to click to be able to open a page -->
-      <a-box sq-collider sq-interactable handle-click color="green" position="0 1 -4" depth="0.05" width="1.5" height="0.4">
-        <a-text value="click me" position="0 0 0.06" align="center"></a-text>
+      <a-box sq-collider sq-interactable handle-click color="green" position="-1.886 1.211147 -5.4285" rotation="0 42.245 0" depth="0.005" width="0.2" height="0.08">
       </a-box>
       
       

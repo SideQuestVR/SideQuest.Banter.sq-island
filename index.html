@@ -30,7 +30,7 @@
           init: function () {
               // When you click on an element, run the animatio on the parent element
               this.el.addEventListener('click', () => {
-                 link("https://store.steampowered.com/app/1462520/BRINK_Traveler/")
+                 openPage("https://store.steampowered.com/app/1462520/BRINK_Traveler/")
               })
           }
       });
@@ -41,9 +41,9 @@
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/scan_android?263;
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/scan_android?265;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/scan_standalonewindows?263;"
+                             desktop: https://hoehler.org/Banter/AssetBundle/scan_standalonewindows?265;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-clippingplane="near: 0.15; far: 1000">
 
       <!-- A box to click to be able to open a page -->

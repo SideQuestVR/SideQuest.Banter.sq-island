@@ -3,55 +3,19 @@
   <head>
     
         <!-- Add meta tags to show icon/title in the menu in banter -->
-    <meta property="og:title" content="Alto del Telegrafo">
-    <meta property="og:description" content="Enjoy the view">
+    <meta property="og:title" content="Lobby">
+    <meta property="og:description" content="Okay Boomer">
     <meta property="og:image" content="https://cdn.glitch.global/5d36a62e-c29a-4b6d-9b5e-3c5a246215a8/ScanThumb.png?v=1696179582585">
-    <meta name="sidequest-space-verification" content="45400ca7-0119-47b3-b527-3447299c8a59">
-    
-  
+
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    
-        <script>
-      // A simple aframe component to handle the click
-      AFRAME.registerComponent('handle-click', {
-          init: function () {
-              // When you click on an element, run the animatio on the parent element
-              this.el.addEventListener('click', () => {
-                 deeplink("https://www.meta.com/en-gb/experiences/3635172946605196/")
-              })
-          }
-      });
-    </script>
-    
-    
-            <script>
-      // A simple aframe component to handle the click
-      AFRAME.registerComponent('handle-click2', {
-          init: function () {
-              // When you click on an element, run the animatio on the parent element
-              this.el.addEventListener('click', () => {
-                 openPage("https://store.steampowered.com/app/1462520/BRINK_Traveler/")
-              })
-          }
-      });
-    </script>
-    
-    
-    
   </head>
   
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/scan_android?267;
+    <a-scene sq-assetbundle="android: https://cdn.sidequestvr.com/file/491344/lobby2_android;
                              
-                             desktop: https://hoehler.org/Banter/AssetBundle/scan_standalonewindows?267;"
+                             desktop: https://cdn.sidequestvr.com/file/491346/lobby2_standalonewindows;"
               sq-enablespiderman sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-clippingplane="near: 0.15; far: 1000">
 
-      <!-- A box to click to be able to open a page -->
-      <a-box sq-collider sq-interactable handle-click color="green" position="-1.886 1.211147 -5.4285" rotation="0 42.245 0" depth="0.005" width="0.2" height="0.08">
-      </a-box>
-      
-        <a-box sq-collider sq-interactable handle-click2 color="green" position="-2.057788 1.211147 -5.25" rotation="0 42.6 0" depth="0.005" width="0.2" height="0.08">
-      </a-box>
       
       <a-entity sq-browser="url: https://sq-screensaver.glitch.me/?url=https://cdn.glitch.global/5d36a62e-c29a-4b6d-9b5e-3c5a246215a8/DALL%C2%B7E%202023-10-24%2021.26.09%20-%20Synthwave%20decal%20with%20the%20vibrant%20'BANTER'%20logo%20in%20cyan%20and%20purple.%20Around%20the%20logo%2C%20neon%20silhouettes%20of%20avatars%20interact%2C%20with%20humorous%20captions%20like%20.png?v=1698660901119&speed=1&width=200&height=80" position="2.057788 1.611147 -5.25" scale="3 3.5 2">  </a-entity>
       

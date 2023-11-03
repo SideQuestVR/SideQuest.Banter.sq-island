@@ -1,22 +1,22 @@
 
 <html>
   <head>
-    <meta property="og:title" content="Banter-Studio">
-    <meta property="og:description" content="Light Sound Action">
+    <meta property="og:title" content="Banter-Island">
+    <meta property="og:description" content="sit back and relax">
     <meta property="og:image" content="https://cdn.glitch.global/b3ec2074-57ba-4ff4-aed6-07342a20738b/BanterStudio.png?v=1698790817345">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/studio_03_android?007;                
-                             desktop: https://hoehler.org/Banter/AssetBundle/studio_03_standalonewindows?007;"
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/island_android?002;                
+                             desktop: https://hoehler.org/Banter/AssetBundle/island_standalonewindows?002;"
              
                sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 0;" sq-clippingplane="near: 0.15; far: 1000">
       
       
       <!-- DVD Screensaver -->
-      <a-entity sq-browser="url: https://sq-screensaver.glitch.me/?url=https://cdn.glitch.global/3c5cbb14-9392-459b-aed7-39bc46fa458f/DVD.png?v=1698675187444?v=1698670440353?v=1698660901119&speed=2&width=200&height=100&bgColor=%23422353" position="0 3 4.99" rotation="0 180 0" scale="8 7.9 1">  </a-entity>
+      <a-entity sq-browser="url: https://sq-screensaver.glitch.me/?url=https://cdn.glitch.global/3c5cbb14-9392-459b-aed7-39bc46fa458f/DVD.png?v=1698675187444?v=1698670440353?v=1698660901119&speed=2&width=200&height=100&bgColor=%23422353" position="0.83 5.58 -29.65" rotation="0 -14.403 0" scale="19.5 18.5 1">  </a-entity>
       
-      <!-- Image on Screen -->
+      <!-- Image on Screen
          <a-assets>
         <img id="plane-textureScreen" src="https://media.discordapp.net/attachments/1067412677581873223/1169010563393781842/311573413_478565514317086_834171553403369883_n.png?ex=6553d8ed&is=654163ed&hm=2cda4c7548ea402a3890306ec5afb9b5125dfd4d5c7fce5bfcef47c9c7c77198&=&width=1518&height=853">
     </a-assets>
@@ -26,17 +26,8 @@
             scale="8 4.5 1"
             material="shader: flat; src: #plane-textureScreen; emissive: #AAA">
         </a-plane>
+      -->
       
-       <!-- Image on Table -->
-      <a-assets>
-        <img id="plane-texture" src="https://cdn.glitch.global/b3ec2074-57ba-4ff4-aed6-07342a20738b/tvrs_logo_small.jpg?v=1698790924840">
-    </a-assets>
-        <a-plane 
-            position="0 6 5" 
-            rotation="0 -180 0" 
-            scale="2 1.125 1"
-            material="shader: flat; src: #plane-texture; emissive: #AAA">
-        </a-plane>
 
     </a-scene>
   </body>

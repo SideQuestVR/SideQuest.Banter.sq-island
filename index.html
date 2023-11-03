@@ -7,8 +7,11 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/island_android?008;                
-                             desktop: https://hoehler.org/Banter/AssetBundle/island_standalonewindows?008;"
+
+
+
+    <a-scene sq-assetbundle="android: https://hoehler.org/Banter/AssetBundle/island_android?009;                
+                             desktop: https://hoehler.org/Banter/AssetBundle/island_standalonewindows?009;"
              
                sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 0;" sq-clippingplane="near: 0.15; far: 1000">
       
@@ -21,6 +24,33 @@
               playlist="PLpaueZh8o4LaikgW1qUMyvK8Wgv3ORegC"
       
       ></script>
+      
+      
+   <script>
+      AFRAME.registerComponent("play-avatar", {
+        init: function() {
+          window.loadDoneCallback = () => {
+            playAvatar(this.el.object3D.id, 
+                       
+                       // Replace these two
+               "https://cdn.glitch.global/a2b92045-cc20-467e-a6e5-ae9b32844aac/avatarRecording.trackingsession?v=1699040482011", 
+               "https://cdn.glitch.global/a2b92045-cc20-467e-a6e5-ae9b32844aac/avatarRecording.wav?v=1699040479690", 
+                       
+                       //leave this intact (or put your own on here)
+               "https://models.readyplayer.me/652592992537ec63d99d7fec.glb",
+                // this probably wont be needed when we are done with the foot stuff, the parent object should be able to offset.
+                {x: 0, y: 0, z: 0});
+          };
+        }
+      })
+    </script>
+      
+      
+      
+   
+      
+      
+      <a-entity play-avatar></a-entity>
       
 
     </a-scene>

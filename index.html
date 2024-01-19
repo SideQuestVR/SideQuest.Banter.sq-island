@@ -18,9 +18,14 @@
                         desktop: https://cdn.sidequestvr.com/file/519233/kitbundle_standalonewindows;" 
              
                sq-enablespiderman sq-refreshrate="rate:90" sq-maxoccupancy="number: 30" sq-spawnpoint="position: 9.635077 6.477827 -2.522462 105;" sq-clippingplane="near: 0.15; far: 750">
-      
-                  <a-entity sq-collider="recursive: false"  scale="1.2 1.2 1.2" position="-12.6 3.8 13" rotation="0 55 0" 
-                gltf-model="https://cdn.glitch.global/a2b92045-cc20-467e-a6e5-ae9b32844aac/StremingSign1.glb?v=1705696488134"></a-entity>
+     
+           
+                  <a-entity sq-climbable sq-collider="recursive: true"  scale="1.2 1.2 1.2" position="-12.6 3.8 13" rotation="0 55 0" 
+                gltf-model="https://cdn.glitch.global/a2b92045-cc20-467e-a6e5-ae9b32844aac/StremingSign1.glb?v=1705696488134">
+      <a-box sq-collider color="dimgrey" scale="1 1 1"></a-box>
+      </a-entity>
+           
+
       
       <!--"android: https://cdn.sidequestvr.com/file/511412/island_android;                
                              desktop: https://cdn.sidequestvr.com/file/511413/island_standalonewindows;"--> 

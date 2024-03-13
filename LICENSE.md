@@ -1,5 +1,5 @@
 The MIT License
-
+ 
 Copyright © 2015-2018 A-Frame authors.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

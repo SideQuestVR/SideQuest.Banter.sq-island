@@ -21,6 +21,26 @@
   gtag('config', 'G-KWHTCBM8G0');
 </script>
 
+    <script>
+      // A simple aframe component to handle the click
+      AFRAME.registerComponent('handle-click', {
+          init: function () {
+              let clicked = false;
+              // When you click on an element, run the animation on the parent element
+              this.el.addEventListener('click', () => {
+                clicked = !clicked;
+                if(clicked) {
+                  console.log(clicked, "gorillaPlayer");
+                  gorillaPlayer()
+                }else{
+                  console.log(clicked, "ungorillaPlayer");
+                  ungorillaPlayer()
+                }
+              })
+          }
+      });
+    </script>
+
     
   </head>
   
@@ -51,7 +71,12 @@
       <a-entity sq-kititem="item: assets/crystals/crystal5.prefab" handle-grab="number: 5; pos: -5.95 2.4 -2.145" sq-grabbable sq-boxcollider="size: 0.07 0.18 0.07;" rotation="-90 8 0" sq-rigidbody="isKinematic: true; useGravity: false" position="-5.95 2.4 -2.145"></a-entity>
        -->
 <!--       <a-entity sq-boxcollider="size: 0.6 0.01 0.2" rotation="0 8 0" position="-6.403 2.53 -2.057"></a-entity> -->
-      
+
+ <!-- A box to click to be able to open a page -->
+      <a-entity sq-boxcollider="size: 0.07 0.5 0.07;" sq-interactable handle-click position="0 1 -4" rotation="0 0 0">
+        
+      </a-entity>
+	    
     </a-scene></div>
   </body>
 </html>
